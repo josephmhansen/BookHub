@@ -13,18 +13,29 @@ class BookListViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var collectionView: UICollectionView!
     
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
+        let nc = NSNotificationCenter.defaultCenter()
+        nc.addObserver(self, selector: #selector(booksWereUpdated), name: BookControllerDidRefreshNotification, object: nil)
+    }
+    
+    func booksWereUpdated() {
+        self.collectionView.reloadData()
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return BookController.sharedController.books.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        guard let item = collectionView.dequeueReusableCellWithReuseIdentifier("bookItem", forIndexPath: indexPath) as? BookCollectionViewCell else { return BookCollectionViewCell() }
+        
+        let book = BookController.sharedController.books[indexPath.item]
+        
+        item.updateItemWithBook(book)
+        
+        return item
     }
         
     // MARK: - Navigation

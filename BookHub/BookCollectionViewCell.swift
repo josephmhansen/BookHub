@@ -13,4 +13,9 @@ class BookCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var bookImageView: UIImageView!
     @IBOutlet weak var bookRatingLabel: UILabel!
     
+    func updateItemWithBook(book: Book) {
+        self.bookImageView.image = book.photo
+        self.bookRatingLabel.text = book.rating
+    }
+    
 }
