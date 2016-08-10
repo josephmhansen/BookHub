@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC6785681D5B963E0080C151 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6785671D5B963E0080C151 /* Book.swift */; };
+		BC67856A1D5B98940080C151 /* Book+CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6785691D5B98940080C151 /* Book+CloudKit.swift */; };
 		BC7BD26A1D5AEDFB00A0F172 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BD2691D5AEDFB00A0F172 /* AppDelegate.swift */; };
 		BC7BD26F1D5AEDFB00A0F172 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC7BD26D1D5AEDFB00A0F172 /* Main.storyboard */; };
 		BC7BD2711D5AEDFB00A0F172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC7BD2701D5AEDFB00A0F172 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC6785671D5B963E0080C151 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		BC6785691D5B98940080C151 /* Book+CloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Book+CloudKit.swift"; sourceTree = "<group>"; };
 		BC7BD2661D5AEDFA00A0F172 /* BookHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC7BD2691D5AEDFB00A0F172 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC7BD26E1D5AEDFB00A0F172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 		BC7BD27D1D5AF08600A0F172 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BC6785671D5B963E0080C151 /* Book.swift */,
+				BC6785691D5B98940080C151 /* Book+CloudKit.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -183,10 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC6785681D5B963E0080C151 /* Book.swift in Sources */,
 				BC7BD2821D5AF1ED00A0F172 /* BookCollectionViewCell.swift in Sources */,
 				BC7BD26A1D5AEDFB00A0F172 /* AppDelegate.swift in Sources */,
 				BC7BD2801D5AF0F700A0F172 /* BookListViewController.swift in Sources */,
 				BC7BD28A1D5B673D00A0F172 /* AddBookViewController.swift in Sources */,
+				BC67856A1D5B98940080C151 /* Book+CloudKit.swift in Sources */,
 				BC7BD2861D5B015E00A0F172 /* AddBookTableViewController.swift in Sources */,
 				BC7BD2841D5AFA5600A0F172 /* BookDetailTableViewController.swift in Sources */,
 				BC7BD2881D5B025E00A0F172 /* PhotoSelectViewController.swift in Sources */,
