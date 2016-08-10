@@ -16,6 +16,7 @@
 		BC7BD2841D5AFA5600A0F172 /* BookDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BD2831D5AFA5600A0F172 /* BookDetailTableViewController.swift */; };
 		BC7BD2861D5B015E00A0F172 /* AddBookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BD2851D5B015E00A0F172 /* AddBookTableViewController.swift */; };
 		BC7BD2881D5B025E00A0F172 /* PhotoSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BD2871D5B025E00A0F172 /* PhotoSelectViewController.swift */; };
+		BC7BD28A1D5B673D00A0F172 /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BD2891D5B673D00A0F172 /* AddBookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BC7BD2831D5AFA5600A0F172 /* BookDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailTableViewController.swift; sourceTree = "<group>"; };
 		BC7BD2851D5B015E00A0F172 /* AddBookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookTableViewController.swift; sourceTree = "<group>"; };
 		BC7BD2871D5B025E00A0F172 /* PhotoSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSelectViewController.swift; sourceTree = "<group>"; };
+		BC7BD2891D5B673D00A0F172 /* AddBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				BC7BD2811D5AF1ED00A0F172 /* BookCollectionViewCell.swift */,
 				BC7BD2831D5AFA5600A0F172 /* BookDetailTableViewController.swift */,
 				BC7BD2851D5B015E00A0F172 /* AddBookTableViewController.swift */,
+				BC7BD2891D5B673D00A0F172 /* AddBookViewController.swift */,
 				BC7BD2871D5B025E00A0F172 /* PhotoSelectViewController.swift */,
 			);
 			name = View;
@@ -183,6 +186,7 @@
 				BC7BD2821D5AF1ED00A0F172 /* BookCollectionViewCell.swift in Sources */,
 				BC7BD26A1D5AEDFB00A0F172 /* AppDelegate.swift in Sources */,
 				BC7BD2801D5AF0F700A0F172 /* BookListViewController.swift in Sources */,
+				BC7BD28A1D5B673D00A0F172 /* AddBookViewController.swift in Sources */,
 				BC7BD2861D5B015E00A0F172 /* AddBookTableViewController.swift in Sources */,
 				BC7BD2841D5AFA5600A0F172 /* BookDetailTableViewController.swift in Sources */,
 				BC7BD2881D5B025E00A0F172 /* PhotoSelectViewController.swift in Sources */,
@@ -335,6 +339,7 @@
 				BC7BD27A1D5AEDFB00A0F172 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
