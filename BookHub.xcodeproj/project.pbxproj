@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC5BB9B91D5BCE64007D75B2 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5BB9B81D5BCE63007D75B2 /* CloudKitManager.swift */; };
+		BC5BB9BB1D5BCEC9007D75B2 /* BookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5BB9BA1D5BCEC9007D75B2 /* BookController.swift */; };
 		BC6785681D5B963E0080C151 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6785671D5B963E0080C151 /* Book.swift */; };
 		BC67856A1D5B98940080C151 /* Book+CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6785691D5B98940080C151 /* Book+CloudKit.swift */; };
 		BC7BD26A1D5AEDFB00A0F172 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BD2691D5AEDFB00A0F172 /* AppDelegate.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC5BB9B81D5BCE63007D75B2 /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		BC5BB9BA1D5BCEC9007D75B2 /* BookController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookController.swift; sourceTree = "<group>"; };
 		BC6785671D5B963E0080C151 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		BC6785691D5B98940080C151 /* Book+CloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Book+CloudKit.swift"; sourceTree = "<group>"; };
 		BC7BD2661D5AEDFA00A0F172 /* BookHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +83,8 @@
 		BC7BD27B1D5AF07A00A0F172 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BC5BB9B81D5BCE63007D75B2 /* CloudKitManager.swift */,
+				BC5BB9BA1D5BCEC9007D75B2 /* BookController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -190,9 +196,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC6785681D5B963E0080C151 /* Book.swift in Sources */,
+				BC5BB9BB1D5BCEC9007D75B2 /* BookController.swift in Sources */,
 				BC7BD2821D5AF1ED00A0F172 /* BookCollectionViewCell.swift in Sources */,
 				BC7BD26A1D5AEDFB00A0F172 /* AppDelegate.swift in Sources */,
 				BC7BD2801D5AF0F700A0F172 /* BookListViewController.swift in Sources */,
+				BC5BB9B91D5BCE64007D75B2 /* CloudKitManager.swift in Sources */,
 				BC7BD28A1D5B673D00A0F172 /* AddBookViewController.swift in Sources */,
 				BC67856A1D5B98940080C151 /* Book+CloudKit.swift in Sources */,
 				BC7BD2861D5B015E00A0F172 /* AddBookTableViewController.swift in Sources */,
