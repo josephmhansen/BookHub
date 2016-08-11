@@ -11,7 +11,6 @@
 		BC5BB9BB1D5BCEC9007D75B2 /* BookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5BB9BA1D5BCEC9007D75B2 /* BookController.swift */; };
 		BC5BB9C01D5BDDA1007D75B2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5BB9BF1D5BDDA1007D75B2 /* CloudKit.framework */; };
 		BC6785681D5B963E0080C151 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6785671D5B963E0080C151 /* Book.swift */; };
-		BC67856A1D5B98940080C151 /* Book+CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6785691D5B98940080C151 /* Book+CloudKit.swift */; };
 		BC7BD26A1D5AEDFB00A0F172 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BD2691D5AEDFB00A0F172 /* AppDelegate.swift */; };
 		BC7BD26F1D5AEDFB00A0F172 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC7BD26D1D5AEDFB00A0F172 /* Main.storyboard */; };
 		BC7BD2711D5AEDFB00A0F172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC7BD2701D5AEDFB00A0F172 /* Assets.xcassets */; };
@@ -21,6 +20,7 @@
 		BC7BD2841D5AFA5600A0F172 /* BookDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BD2831D5AFA5600A0F172 /* BookDetailTableViewController.swift */; };
 		BC7BD2881D5B025E00A0F172 /* PhotoSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BD2871D5B025E00A0F172 /* PhotoSelectViewController.swift */; };
 		BC7BD28A1D5B673D00A0F172 /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BD2891D5B673D00A0F172 /* AddBookViewController.swift */; };
+		BC7E6A491D5C30760094BEF5 /* CloudKitSyncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E6A481D5C30760094BEF5 /* CloudKitSyncable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,6 @@
 		BC5BB9BC1D5BDD65007D75B2 /* BookHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BookHub.entitlements; sourceTree = "<group>"; };
 		BC5BB9BF1D5BDDA1007D75B2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		BC6785671D5B963E0080C151 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		BC6785691D5B98940080C151 /* Book+CloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Book+CloudKit.swift"; sourceTree = "<group>"; };
 		BC7BD2661D5AEDFA00A0F172 /* BookHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC7BD2691D5AEDFB00A0F172 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC7BD26E1D5AEDFB00A0F172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,6 +40,7 @@
 		BC7BD2831D5AFA5600A0F172 /* BookDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailTableViewController.swift; sourceTree = "<group>"; };
 		BC7BD2871D5B025E00A0F172 /* PhotoSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSelectViewController.swift; sourceTree = "<group>"; };
 		BC7BD2891D5B673D00A0F172 /* AddBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
+		BC7E6A481D5C30760094BEF5 /* CloudKitSyncable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitSyncable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,9 @@
 			children = (
 				BC5BB9BF1D5BDDA1007D75B2 /* CloudKit.framework */,
 				BC7BD2681D5AEDFB00A0F172 /* BookHub */,
+				BC7E6A471D5C303C0094BEF5 /* Protocols */,
 				BC7BD27E1D5AF0BB00A0F172 /* Utilities */,
+				BC7BD2721D5AEDFB00A0F172 /* LaunchScreen.storyboard */,
 				BC7BD2671D5AEDFA00A0F172 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				BC6785671D5B963E0080C151 /* Book.swift */,
-				BC6785691D5B98940080C151 /* Book+CloudKit.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -120,10 +121,18 @@
 				BC7BD2691D5AEDFB00A0F172 /* AppDelegate.swift */,
 				BC7BD26D1D5AEDFB00A0F172 /* Main.storyboard */,
 				BC7BD2701D5AEDFB00A0F172 /* Assets.xcassets */,
-				BC7BD2721D5AEDFB00A0F172 /* LaunchScreen.storyboard */,
 				BC7BD2751D5AEDFB00A0F172 /* Info.plist */,
 			);
 			name = Utilities;
+			path = BookHub;
+			sourceTree = "<group>";
+		};
+		BC7E6A471D5C303C0094BEF5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BC7E6A481D5C30760094BEF5 /* CloudKitSyncable.swift */,
+			);
+			name = Protocols;
 			path = BookHub;
 			sourceTree = "<group>";
 		};
@@ -204,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC7E6A491D5C30760094BEF5 /* CloudKitSyncable.swift in Sources */,
 				BC6785681D5B963E0080C151 /* Book.swift in Sources */,
 				BC5BB9BB1D5BCEC9007D75B2 /* BookController.swift in Sources */,
 				BC7BD2821D5AF1ED00A0F172 /* BookCollectionViewCell.swift in Sources */,
@@ -211,7 +221,6 @@
 				BC7BD2801D5AF0F700A0F172 /* BookListViewController.swift in Sources */,
 				BC5BB9B91D5BCE64007D75B2 /* CloudKitManager.swift in Sources */,
 				BC7BD28A1D5B673D00A0F172 /* AddBookViewController.swift in Sources */,
-				BC67856A1D5B98940080C151 /* Book+CloudKit.swift in Sources */,
 				BC7BD2841D5AFA5600A0F172 /* BookDetailTableViewController.swift in Sources */,
 				BC7BD2881D5B025E00A0F172 /* PhotoSelectViewController.swift in Sources */,
 			);
@@ -234,6 +243,7 @@
 				BC7BD2731D5AEDFB00A0F172 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = BookHub;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
