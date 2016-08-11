@@ -38,7 +38,10 @@ class Book: CloudKitSyncable {
         
         guard let rating = record[Book.ratingKey] as? String,
             timestamp = record.creationDate,
-            photoAsset = record[Book.photoDataKey] as? CKAsset else { return nil }
+            photoAsset = record[Book.photoDataKey] as? CKAsset else {
+                print("Failable initializer Failed.")
+                return nil
+        }
         
         let photoData = NSData(contentsOfURL: photoAsset.fileURL)
         self.init(rating: rating, timestamp: timestamp, photoData: photoData)
@@ -65,6 +68,7 @@ extension CKRecord {
         self.init(recordType: book.recordType, recordID: recordID)
         
         self[Book.dateKey] = book.timeStamp
+        self[Book.ratingKey] = book.rating
         self[Book.photoDataKey] = CKAsset(fileURL: book.temporaryPhotoURL)
     }
 }

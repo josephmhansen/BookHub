@@ -31,19 +31,24 @@ class BookController {
         }
     }
     
-    func postNewBook(book: Book, completion: (NSError?) -> Void) {
+    func postNewBook(rating: String, image: UIImage, date: NSDate, completion: ((Book) -> Void)?) {
+       guard let data = UIImageJPEGRepresentation(image, 0.8) else { return }
         
-        let record = book.cloudKitRecord
+        let book = Book(rating: rating, timestamp: NSDate(), photoData: data)
+        books.append(book)
         
-        cloudKitManager.saveRecord(record) { (error) in
-            
-            if let error = error {
-                print("Error saving \(book) to CloudKit \(error.localizedDescription)")
+        cloudKitManager.saveRecord(CKRecord(book)) { (record, error) in
+            guard let record = record else {
+                if let error = error {
+                    print("Error saving new book to CloudKit \(error.localizedDescription)")
+                    return
+                }
+                completion?(book)
                 return
             }
-            self.books.insert(book, atIndex: 0)
-            print("Book successfully saved!")
+            book.cloudKitRecordID = record.recordID
         }
+       
     }
     
     func refresh(completion: ((NSError?) -> Void)? = nil) {
@@ -58,7 +63,7 @@ class BookController {
             
             guard let records = records else { return }
             
-            self.books = records.flatMap { Book(ckRecord: $0) }
+            self.books = records.flatMap { Book(record: $0) }
             print("Successfully created Book CKRecord")
         }
     }

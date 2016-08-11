@@ -2,4 +2,54 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookHub/Book.swift"
+            timestampString = "492591828.905531"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "init(record:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BookHub.Book.init (record : __ObjC.CKRecord) -&gt; Swift.Optional&lt;BookHub.Book&gt;"
+                  moduleName = "BookHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diegoaguirre/Desktop/Development/DevMountain_iOS7/Unit4/Module3/BookHub/BookHub/Book.swift"
+                  timestampString = "492592719.632089"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BookHub.Book.init (record : __ObjC.CKRecord) -&gt; Swift.Optional&lt;BookHub.Book&gt;"
+                  moduleName = "BookHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diegoaguirre/Desktop/Development/DevMountain_iOS7/Unit4/Module3/BookHub/BookHub/Book.swift"
+                  timestampString = "492592719.632272"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "452">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

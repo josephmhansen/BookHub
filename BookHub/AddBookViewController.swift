@@ -53,24 +53,24 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func getBookButtonPressed(sender: AnyObject) {
-        // Use the following URL to get book covers 
+        // Use the following URL to get book covers
         guard let url = NSURL(string: "http://bookcoverarchive.com") else { return }
         
         let safariController = SFSafariViewController(URL: url)
         presentViewController(safariController, animated: true, completion: nil)
     }
-   
+    
     @IBAction func addBookButtonPressed(sender: AnyObject) {
-        if let ratingText = ratingTextField.text,
-            image = bookCoverImageView.image,
-            photoData = UIImageJPEGRepresentation(image, 0.4) {
-            
-            let book = Book(rating: ratingText, date: NSDate(), photoData: photoData)
-            BookController.sharedController.postNewBook(book, completion: { (_) in
-                print("Book successfully saved to CloudKit")
-            })
-            self.dismissViewControllerAnimated(true, completion: nil)
+        guard let ratingText = ratingTextField.text,
+            image = bookCoverImageView.image else {
+                print("No Rating or Image to add to a book")
+                return
         }
+            
+            // let book = Book(rating: ratingText, timestamp: NSDate(), photoData: photoData)
+            BookController.sharedController.postNewBook(ratingText, image: image, date: NSDate(), completion: nil)
+            self.dismissViewControllerAnimated(true, completion: nil)
+        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

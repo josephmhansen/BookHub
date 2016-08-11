@@ -22,10 +22,11 @@ class CloudKitManager {
         database.performQuery(query, inZoneWithID: nil, completionHandler: completion)
     }
     
-    func saveRecord(record: CKRecord, completion: ((NSError?) -> Void) = {_ in }) {
+    func saveRecord(record: CKRecord, completion: ((record: CKRecord?, error: NSError?) -> Void)?) {
         
-        database.saveRecord(record) { (_, error) in
-            completion(error)
+        database.saveRecord(record) { (record, error) in
+            
+            completion?(record: record, error: error)
         }
     }
 }
