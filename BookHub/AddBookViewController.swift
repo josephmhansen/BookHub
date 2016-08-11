@@ -45,6 +45,13 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
         presentViewController(actionSheet, animated: true, completion: nil)
     }
     
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else { return }
+        
+        bookCoverImageView.image = image
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     @IBAction func getBookButtonPressed(sender: AnyObject) {
         // Use the following URL to get book covers 
         guard let url = NSURL(string: "http://bookcoverarchive.com") else { return }

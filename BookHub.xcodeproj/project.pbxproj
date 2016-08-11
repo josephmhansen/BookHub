@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BC5BB9B91D5BCE64007D75B2 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5BB9B81D5BCE63007D75B2 /* CloudKitManager.swift */; };
 		BC5BB9BB1D5BCEC9007D75B2 /* BookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5BB9BA1D5BCEC9007D75B2 /* BookController.swift */; };
+		BC5BB9C01D5BDDA1007D75B2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5BB9BF1D5BDDA1007D75B2 /* CloudKit.framework */; };
 		BC6785681D5B963E0080C151 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6785671D5B963E0080C151 /* Book.swift */; };
 		BC67856A1D5B98940080C151 /* Book+CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6785691D5B98940080C151 /* Book+CloudKit.swift */; };
 		BC7BD26A1D5AEDFB00A0F172 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BD2691D5AEDFB00A0F172 /* AppDelegate.swift */; };
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		BC5BB9B81D5BCE63007D75B2 /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 		BC5BB9BA1D5BCEC9007D75B2 /* BookController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookController.swift; sourceTree = "<group>"; };
+		BC5BB9BC1D5BDD65007D75B2 /* BookHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BookHub.entitlements; sourceTree = "<group>"; };
+		BC5BB9BF1D5BDDA1007D75B2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		BC6785671D5B963E0080C151 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		BC6785691D5B98940080C151 /* Book+CloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Book+CloudKit.swift"; sourceTree = "<group>"; };
 		BC7BD2661D5AEDFA00A0F172 /* BookHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC5BB9C01D5BDDA1007D75B2 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +58,7 @@
 		BC7BD25D1D5AEDFA00A0F172 = {
 			isa = PBXGroup;
 			children = (
+				BC5BB9BF1D5BDDA1007D75B2 /* CloudKit.framework */,
 				BC7BD2681D5AEDFB00A0F172 /* BookHub */,
 				BC7BD27E1D5AF0BB00A0F172 /* Utilities */,
 				BC7BD2671D5AEDFA00A0F172 /* Products */,
@@ -71,6 +76,7 @@
 		BC7BD2681D5AEDFB00A0F172 /* BookHub */ = {
 			isa = PBXGroup;
 			children = (
+				BC5BB9BC1D5BDD65007D75B2 /* BookHub.entitlements */,
 				BC7BD27D1D5AF08600A0F172 /* Model */,
 				BC7BD27C1D5AF08000A0F172 /* View */,
 				BC7BD27B1D5AF07A00A0F172 /* Controller */,
@@ -153,6 +159,12 @@
 				TargetAttributes = {
 					BC7BD2651D5AEDFA00A0F172 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = HQN23BS377;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -314,9 +326,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BookHub/BookHub.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BookHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.diegoa3d.BookHub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.diegodeveloper.BookHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -325,9 +339,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BookHub/BookHub.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BookHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.diegoa3d.BookHub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.diegodeveloper.BookHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
