@@ -12,6 +12,7 @@
 		72F809FD1D5CE73700816108 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F809FC1D5CE73700816108 /* CloudKitManager.swift */; };
 		72F809FF1D5CE7D100816108 /* BookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F809FE1D5CE7D100816108 /* BookController.swift */; };
 		72F80A021D5D192900816108 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F80A011D5D192900816108 /* CloudKit.framework */; };
+		72F80A051D5E662400816108 /* CloudKitSyncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F80A041D5E662400816108 /* CloudKitSyncable.swift */; };
 		BC7BD26A1D5AEDFB00A0F172 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BD2691D5AEDFB00A0F172 /* AppDelegate.swift */; };
 		BC7BD26F1D5AEDFB00A0F172 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC7BD26D1D5AEDFB00A0F172 /* Main.storyboard */; };
 		BC7BD2711D5AEDFB00A0F172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC7BD2701D5AEDFB00A0F172 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		72F809FE1D5CE7D100816108 /* BookController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookController.swift; sourceTree = "<group>"; };
 		72F80A001D5D192600816108 /* BookHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BookHub.entitlements; sourceTree = "<group>"; };
 		72F80A011D5D192900816108 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		72F80A041D5E662400816108 /* CloudKitSyncable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitSyncable.swift; sourceTree = "<group>"; };
 		BC7BD2661D5AEDFA00A0F172 /* BookHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC7BD2691D5AEDFB00A0F172 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC7BD26E1D5AEDFB00A0F172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72F80A031D5E65FA00816108 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				72F80A041D5E662400816108 /* CloudKitSyncable.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		BC7BD25D1D5AEDFA00A0F172 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				72F80A001D5D192600816108 /* BookHub.entitlements */,
+				72F80A031D5E65FA00816108 /* Protocols */,
 				BC7BD27D1D5AF08600A0F172 /* Model */,
 				BC7BD27C1D5AF08000A0F172 /* View */,
 				BC7BD27B1D5AF07A00A0F172 /* Controller */,
@@ -208,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72F809F91D5CDB2B00816108 /* Book.swift in Sources */,
+				72F80A051D5E662400816108 /* CloudKitSyncable.swift in Sources */,
 				72F809FF1D5CE7D100816108 /* BookController.swift in Sources */,
 				BC7BD2821D5AF1ED00A0F172 /* BookCollectionViewCell.swift in Sources */,
 				BC7BD26A1D5AEDFB00A0F172 /* AppDelegate.swift in Sources */,
