@@ -13,4 +13,20 @@ class BookCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var bookImageView: UIImageView!
     @IBOutlet weak var bookRatingLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    func updateWithBook(book: Book) {
+        bookImageView.image = book.photo
+        bookRatingLabel.text = book.rating
+        
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
+    
+  
+    
 }

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72F809F91D5CDB2B00816108 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F809F81D5CDB2B00816108 /* Book.swift */; };
+		72F809FB1D5CDDA600816108 /* Book+CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F809FA1D5CDDA600816108 /* Book+CloudKit.swift */; };
+		72F809FD1D5CE73700816108 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F809FC1D5CE73700816108 /* CloudKitManager.swift */; };
+		72F809FF1D5CE7D100816108 /* BookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F809FE1D5CE7D100816108 /* BookController.swift */; };
+		72F80A021D5D192900816108 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F80A011D5D192900816108 /* CloudKit.framework */; };
 		BC7BD26A1D5AEDFB00A0F172 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BD2691D5AEDFB00A0F172 /* AppDelegate.swift */; };
 		BC7BD26F1D5AEDFB00A0F172 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC7BD26D1D5AEDFB00A0F172 /* Main.storyboard */; };
 		BC7BD2711D5AEDFB00A0F172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC7BD2701D5AEDFB00A0F172 /* Assets.xcassets */; };
@@ -20,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		72F809F81D5CDB2B00816108 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		72F809FA1D5CDDA600816108 /* Book+CloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Book+CloudKit.swift"; sourceTree = "<group>"; };
+		72F809FC1D5CE73700816108 /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		72F809FE1D5CE7D100816108 /* BookController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookController.swift; sourceTree = "<group>"; };
+		72F80A001D5D192600816108 /* BookHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BookHub.entitlements; sourceTree = "<group>"; };
+		72F80A011D5D192900816108 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		BC7BD2661D5AEDFA00A0F172 /* BookHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC7BD2691D5AEDFB00A0F172 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC7BD26E1D5AEDFB00A0F172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F80A021D5D192900816108 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +60,7 @@
 		BC7BD25D1D5AEDFA00A0F172 = {
 			isa = PBXGroup;
 			children = (
+				72F80A011D5D192900816108 /* CloudKit.framework */,
 				BC7BD2681D5AEDFB00A0F172 /* BookHub */,
 				BC7BD27E1D5AF0BB00A0F172 /* Utilities */,
 				BC7BD2671D5AEDFA00A0F172 /* Products */,
@@ -65,6 +78,7 @@
 		BC7BD2681D5AEDFB00A0F172 /* BookHub */ = {
 			isa = PBXGroup;
 			children = (
+				72F80A001D5D192600816108 /* BookHub.entitlements */,
 				BC7BD27D1D5AF08600A0F172 /* Model */,
 				BC7BD27C1D5AF08000A0F172 /* View */,
 				BC7BD27B1D5AF07A00A0F172 /* Controller */,
@@ -75,6 +89,8 @@
 		BC7BD27B1D5AF07A00A0F172 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				72F809FC1D5CE73700816108 /* CloudKitManager.swift */,
+				72F809FE1D5CE7D100816108 /* BookController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -95,6 +111,8 @@
 		BC7BD27D1D5AF08600A0F172 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				72F809F81D5CDB2B00816108 /* Book.swift */,
+				72F809FA1D5CDDA600816108 /* Book+CloudKit.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -144,6 +162,12 @@
 				TargetAttributes = {
 					BC7BD2651D5AEDFA00A0F172 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 793L5ZBT7T;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -183,10 +207,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F809F91D5CDB2B00816108 /* Book.swift in Sources */,
+				72F809FF1D5CE7D100816108 /* BookController.swift in Sources */,
 				BC7BD2821D5AF1ED00A0F172 /* BookCollectionViewCell.swift in Sources */,
 				BC7BD26A1D5AEDFB00A0F172 /* AppDelegate.swift in Sources */,
 				BC7BD2801D5AF0F700A0F172 /* BookListViewController.swift in Sources */,
+				72F809FD1D5CE73700816108 /* CloudKitManager.swift in Sources */,
 				BC7BD28A1D5B673D00A0F172 /* AddBookViewController.swift in Sources */,
+				72F809FB1D5CDDA600816108 /* Book+CloudKit.swift in Sources */,
 				BC7BD2861D5B015E00A0F172 /* AddBookTableViewController.swift in Sources */,
 				BC7BD2841D5AFA5600A0F172 /* BookDetailTableViewController.swift in Sources */,
 				BC7BD2881D5B025E00A0F172 /* PhotoSelectViewController.swift in Sources */,
@@ -302,9 +330,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BookHub/BookHub.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BookHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.diegoa3d.BookHub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josephhansen.BookHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -313,9 +343,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BookHub/BookHub.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BookHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.diegoa3d.BookHub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josephhansen.BookHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
